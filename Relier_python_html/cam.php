@@ -16,8 +16,8 @@
 	if (isset($_POST['update']))
 	{
 
-
-		echo shell_exec("python cam.py 2>&1");
+		echo shell_exec("python cam.py");
+		//echo shell_exec("python cam.py 2>&1");
 	}
 
 ?>
