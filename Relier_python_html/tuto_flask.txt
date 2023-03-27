@@ -1,0 +1,50 @@
+Ce fichier est un tuto pour connecter un programme python à une page html.
+
+Pour cela, il nous faut Flask. Il faut ouvrir le terminal et entrer la comme suivante : "pip install flask"
+Ensuite, créez un fichier nommé "app.py"
+Ajoutez le code suivant :
+
+from flask import Flask, render_template, request
+import subprocess
+
+app = Flask(__name__)
+
+# Route pour la page d'accueil
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+# Route pour lancer le programme
+@app.route('/start_program', methods=['POST'])
+def start_program():
+    subprocess.Popen(['python', 'nom_de_votre_fichier.py'])
+    return "Programme lancé"
+
+# Route pour arrêter le programme
+@app.route('/stop_program', methods=['POST'])
+def stop_program():
+    subprocess.Popen.kill()
+    return "Programme arrêté"
+    
+if __name__ == '__main__':
+    app.run(debug=True)
+
+Maintenant, créer le dossier qui vas contenir la page html. Appellez le "templates" et créez y le fichier "home.html" avec le code suivant : 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flask App</title>
+</head>
+<body>
+	<h1>Bienvenue sur l'application Flask</h1>
+	<form action="/start_program" method="POST">
+		<button type="submit">Lancer le programme</button>
+	</form>
+	<form action="/stop_program" method="POST">
+		<button type="submit">Arrêter le programme</button>
+	</form>
+</body>
+</html>
+
+Retournez dans le dossier ultérieur et lancer le serveur Flask. "python app.py"
