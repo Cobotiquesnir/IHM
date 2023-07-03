@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inscription</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/inscription.css')}}">
+</head>
+<body>
+	<center><h1>Inscription</h1>
+	<form method="POST" action="/inscription" enctype="multipart/form-data">
+		<label for="prenom">Prenom :</label>
+		<input type="text" id="prenom" name="prenom" required><br><br>
+
+		<label for="nom">Nom :</label>
+		<input type="text" id="nom" name="nom" required><br><br>
+
+		<label for="email">Adresse mail :</label>
+		<input type="email" id="email" name="email" required><br><br>
+
+		<label for="password">Mot de passe :</label>
+		<input type="password" id="password" name="password" required><br><br>
+		
+		<label for="photo">Photo :</label>
+    	<input type="file" name="photo">
+
+		<input type="submit" value="S'inscrire">
+	</form></center>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/connexion.css')}}">
+    
+    <title>Cobotique</title>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename= 'img/logo.png') }}">
+        <center>
+        
+        <form action="/page_connexion" >  
+            <button type="submit" class="Connexion">Connexion</button>
+        </form>
+        
+        </center>
+    </div>
+    <center>
+    
+    <img  class="img" src="{{ url_for('static', filename= 'img/cobo.png') }}"/>
+    
+    <p>Pour aider les laborantins à eviter de manipuler les produits toxiques ou chimique, nous avons fais en sorte qu'il utilise le bras Niryo One pour manipuler.</p>
+    </center>   
+</body>
+</html>
