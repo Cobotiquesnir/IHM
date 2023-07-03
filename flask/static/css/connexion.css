@@ -1,0 +1,70 @@
+*{
+    /*changer la police par robotot*/
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: white;
+    overflow: hidden;
+}
+.header{
+    position: absolute;
+    background: #1F67D4;
+    height: 110px;
+    width: 100%;
+    /*coller le bord coter gauche et en haut*/
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+.header img{
+   /*image en haut à gauche*/
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 250px;
+    height: 80px;
+}
+.header .Connexion{
+    position: absolute;
+    top: 0;
+    left: 43%;
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    background: black;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 30px;
+}
+.header .Connexion:hover{
+    background: white;
+    color: black;
+}
+
+.img{
+    /*Positionner l'image au millieu de la page et ajuster la taille*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 55%;
+    z-index: -1;
+    border-radius: 15%;
+}
+p{
+    position: absolute;
+    width: 30%;
+    height: 221px;
+    left: 560px;
+    margin-top: 40%;
+    text-align: left;
+    font-size: 20px;
+}
