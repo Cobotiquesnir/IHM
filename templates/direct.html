@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Temps réel</title>
+</head>
+<body>
+    <body>
+        <div class="header">
+            <img src="{{ url_for('static', filename= 'img/logo.png') }}">
+            <center>
+            
+            <form action="/page_index">  
+                <button type="submit" class="Menu">Menu</button>
+            </form>
+
+            <form action="/start_direct" method="POST">  
+                <button type="submit" class="REC">REC</button>
+            </form>
+
+            <form action="/stop_direct" method="POST">  
+                <button type="submit" class="Stop">Stop REC</button>
+            </form>
+
+            </center>
+        </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/compte.css')}}">
+  <title>Profil Utilisateur</title>
+
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename= 'img/logo.png') }}">
+        <center>
+        
+          <form action="/page_index">  
+            <button type="submit" class="Menu">Menu</button>
+        </form>
+        </center>  
+  <div class="container">
+    <div class="profile">
+      <div class="profile-image">
+        <img src=" {{ utilisateur[4]}}">
+      </div>
+      <div class="profile-info">
+        
+        <h1>Profil de {{ utilisateur[1] }} {{ utilisateur[2] }}</h1>
+    <p>Nom : {{ utilisateur[1] }}</p>
+    <p>Prénom : {{ utilisateur[2] }}</p>
+    <p>Adresse e-mail : {{ utilisateur[3] }}</p>
+ 
+      </div>
+    </div>
+
+    <!-- Autres éléments de contenu du profil ici -->
+
+  </div>
+</body>
+</html>

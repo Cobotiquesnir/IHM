@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Pré-enregistrer</title>
+</head>
+<body>
+    <body>
+        <div class="header">
+            <img src="{{ url_for('static', filename= 'img/logo.png') }}">
+            <center>
+                <form action="/page_index">  
+                    <button type="submit" class="Menu">Menu</button>
+                </form>
+
+                <form  action="/start_preenregistrer" method="POST">  
+                    <button type="submit" class="REC">REC</button>
+                </form>
+
+                <form action="" method="POST">  
+                    <button type="submit" class="Stop">Stop REC</button>
+                </form>
+            </center>
+        </div>
+        <form  action="/pose1" method="POST">  
+            <button type="submit" class="pose1">Pose 1</button>
+        </form>
+        <form  action="/pose2" method="POST">  
+            <button type="submit" class="pose2">Pose 2</button>
+        </form>
+        <form  action="/pose3" method="POST">  
+            <button type="submit" class="pose3">Pose 3</button>
+        </form>
+</body>
+</html>
